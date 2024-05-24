@@ -16,7 +16,9 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    buildFeatures {
+        dataBinding=true
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -45,4 +47,12 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //retrofit
+    implementation(libs.retrofit)
+    //gson convertor
+    implementation(libs.converter.gson)
+    //picaso
+    // basically used for converting image link given into API
+    implementation("com.squareup.picasso:picasso:2.8")
 }
